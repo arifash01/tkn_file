@@ -8,6 +8,7 @@
           "ENV [A-Z]+_VERSION=(?<currentValue>.*) # (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\s",
           "FROM (?<depName>\\S*):(?<currentValue>\\S*)"
         ],
+        
         "datasourceTemplate": "yaml"
       }
     ]
