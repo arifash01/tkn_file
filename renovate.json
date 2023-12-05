@@ -9,5 +9,9 @@
       "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}",
       "datasourceTemplate": "docker"
     }
-  ]
+  ],
+  "kubernetes": {
+    "fileMatch": ["(?P<filename>.+)\\.yaml$"]
+  }
+
 }
