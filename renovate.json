@@ -6,7 +6,6 @@
       "matchStrings": [
         "image:\\s+(?<depName>(?:[^/]+/)*)(?<currentValue>[^\\s]+)"
       ],
-      "depNameTemplate": "my.new.registry/aRepository/andImage",
       "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}",
       "datasourceTemplate": "docker"
     }
