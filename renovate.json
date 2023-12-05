@@ -1,15 +1,14 @@
 {
-    "customManagers": [
-      {
-        "customType": "regex",
-        "fileMatch": ["^yaml$"],
-        "matchStringsStrategy": "any",
-        "matchStrings": [
-          "ENV [A-Z]+_VERSION=(?<currentValue>.*) # (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\s",
-          "FROM (?<depName>\\S*):(?<currentValue>\\S*)"
-        ],
-        
-        "datasourceTemplate": "yaml"
-      }
-    ]
-  }
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["values.yaml$"],
+      "matchStrings": [
+        "image:\\s+(?<depName>my\\.old\\.registry/aRepository/andImage):(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "my.new.registry/aRepository/andImage",
+      "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
