@@ -2,7 +2,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["*.yaml$"],
+      "fileMatch": ["\.yaml$"],
       "matchStrings": [
         "image:\\s+(?<depName>(?:[^/]+/)*)(?<currentValue>[^\\s]+)"
       ],
