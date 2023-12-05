@@ -1,21 +1,5 @@
 {
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["(?P<filename>.+)\\.yaml$"],
-      "matchStrings": [
-        "image:\\s+(?<depName>(?:[^/]+/)*)(?<currentValue>[^\\s]+)"
-      ],
-      "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}",
-      "datasourceTemplate": "custom.k3s"
-    }
-  ],
-  "kubernetes": {
-    "fileMatch": ["(?P<filename>.+)\\.yaml$"]
-  },
-  "customDatasources": {
-    "k3s": {
-      "defaultRegistryUrlTemplate": "https://pantheon.corp.google.com/gcr/images/distroless/global/base-debian12?e=13802955&mods=logs_tg_prod"
-    }
+  "tekton": {
+    "fileMatch": ["\\.yaml$", "\\.yml$"]
   }
 }
