@@ -7,7 +7,7 @@
         "image:\\s+(?<depName>(?:[^/]+/)*)(?<currentValue>[^\\s]+)"
       ],
       "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}",
-      "datasourceTemplate": "docker"
+      "registryUrlTemplate": "https://pantheon.corp.google.com/gcr/images/distroless/global/base-debian12?e=13802955&mods=logs_tg_prod"
     }
   ],
   "kubernetes": {
