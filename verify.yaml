@@ -8,7 +8,7 @@ spec:
     type: string
   steps:
     - name: goodbye
-      image: alpine:3.14
+      image: alpine:3.18
       script: |
         #!/bin/bash
         echo "Goodbye $(params.username)!"
