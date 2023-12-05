@@ -8,8 +8,9 @@ spec:
     type: string
   steps:
     - name: goodbye
-      image: gcr.io/distroless/base-debian12:debug-nonroot@sha256:d904990dc95bad1ee477aa15c3b40b95e96ea187fd75486957114e3a901de130
+      image: alpine:3.14
       script: |
         #!/bin/bash
-        echo "Goodbye $(params.username)!"       
+        echo "Goodbye $(params.username)!"
+        echo "some other thing"       
  
