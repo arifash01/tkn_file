@@ -8,7 +8,7 @@ spec:
     type: string
   steps:
     - name: goodbye
-      image: gcr.io/cloud-builders/gcloud:latest@sha256:a31fafb5440cdec7b5adf7550d54187046211701ed93218ba78448a08fb9f551
+      image: gcr.io/cloud-builders/gcloud:latest@sha256:1cb584e541d10771b89c8035f18fab02830f3b4f1c8e0861ca00d44a333c83e5
       script: |
         #!/bin/bash
         echo "Goodbye $(params.username)!"
